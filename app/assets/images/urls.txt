@@ -1,0 +1,22 @@
+  List Load (0.4ms)  SELECT "lists".* FROM "lists"
+=>
+[#<List:0x00007f3ea4dff220
+  id: 1,
+  name: "Classics",
+  created_at: Thu, 09 Nov 2023 12:51:51.142397000 UTC +00:00,
+  updated_at: Thu, 09 Nov 2023 12:55:06.922539000 UTC +00:00,
+  image_url:
+   "https://www.hollywoodreporter.com/wp-content/uploads/2022/03/THE-GODFATHER-Talia-Shire-Marlon-Brando-1972-H-MAIN-2022.jpg">,
+ #<List:0x00007f3ea4dff108
+  id: 3,
+  name: "Fantasy",
+  created_at: Thu, 09 Nov 2023 13:04:47.025540000 UTC +00:00,
+  updated_at: Thu, 09 Nov 2023 13:05:33.864630000 UTC +00:00,
+  image_url:
+   "https://www.96five.com/wp-content/uploads/2023/03/Dungeons-and-Dragons-Honor-Among-Thieves-MOvie-Publicity.jpg">,
+ #<List:0x00007f3ea4dff018
+  id: 4,
+  name: "Action",
+  created_at: Thu, 09 Nov 2023 15:29:10.849212000 UTC +00:00,
+  updated_at: Thu, 09 Nov 2023 15:30:42.757464000 UTC +00:00,
+  image_url: "https://stat.ameba.jp/user_images/20190227/11/caro88/df/fd/j/o1463100014363246789.jpg">]

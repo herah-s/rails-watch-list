@@ -3,11 +3,18 @@
   a {
     text-decoration: none;
     color: white;
-    color: white;
-    font-size: large;
+    font-size: 30px;
     font-family: $headers-font;
     font-weight: bold;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   }
+}
 
+.delete {
+  a {
+    color: white;
+    font-size: 14px;
+    font-family: $headers-font;
+    font-weight: lighter;
+  }
 }
