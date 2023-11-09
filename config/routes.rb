@@ -4,5 +4,4 @@ Rails.application.routes.draw do
   # As a user, I can see the details of a movie list
   # As a user, I can bookmark a movie inside a movie list
   # As a user, I can destroy a bookmark
-
 end
