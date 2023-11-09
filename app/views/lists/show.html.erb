@@ -1,0 +1,23 @@
+<div class="list_banner" style='background-image: url("<%= @list.image_url %>")'><%= @list.name %></div>
+
+<div class='container'>
+
+<%= link_to 'New Bookmark', new_list_bookmark_path(@list) %>
+<div class='row'>
+  <% @list.bookmarks.each do |bookmark| %>
+    <div class="col">
+      <div class="card mb-3">
+      <div class="list_banner" style='background-image: url("<%= bookmark.movie.poster_url %>")'></div>
+      <div class="card-body">
+      <h5 class="card-title"><%= bookmark.movie.title %> - <%= bookmark.movie.rating.round(1) %>⭐</h5>
+      <p class="card-text"><%= bookmark.movie.overview %></p>
+      <div class="d-flex justify-content-space-evenly align-items-center">
+      <div><p class="card-text"><small class="text-muted"><%= bookmark.comment %></small></p></div>
+      <div><p class="card-text"><small class="text-muted"><%= link_to 'Delete', bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'}, class: 'btn btn-secondary' %></small></p></div>
+      </div>
+      </div>
+      </div>
+  <% end %>
+    </div>
+</div>
+</div>

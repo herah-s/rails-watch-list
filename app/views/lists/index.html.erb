@@ -1,0 +1,17 @@
+<div class="banner">Movie Lists</div>
+
+<div class='container'>
+<h2>My lists</h2>
+<div class='row'>
+<% @lists.each do |list| %>
+<div class="col">
+  <div class="card bg-dark text-white d-flex">
+    <img class="card-img" src=<%= list.image_url %> alt="List image">
+    <div class="card-img-overlay d-flex justify-content-center align-items-center">
+      <h5 class="card-title"><%= link_to list.name, list_path(list) %></h5>
+    </div>
+  </div>
+</div>
+<% end %>
+</div>
+</div>
