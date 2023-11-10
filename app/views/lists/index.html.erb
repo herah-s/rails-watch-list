@@ -18,13 +18,9 @@
         <div class="modal-body">
           <%= simple_form_for(@list) do |f| %>
                   <%= f.input :name %>
-                  <%= f.input :photo, as: :file %>
-
-        </div>
-        <div class="modal-footer">
+                  <%= f.input :image, as: :file %>
                   <%= f.submit "Save List", class: "btn btn-secondary" %>
               <% end %>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
@@ -32,7 +28,7 @@
 
     <div class='container'>
     <h2>My lists</h2>
-    <% if @lists.any? %>
+    <% if @lists && @lists.any? %>
     <div class='row'>
     <% @lists.each do |list| %>
     <div class="col">
