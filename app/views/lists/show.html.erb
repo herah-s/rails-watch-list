@@ -18,32 +18,27 @@
             <%= simple_form_for [@list, @bookmark] do |f| %>
               <%= f.input :comment %>
               <%= f.association :movie %>
-          </div>
-          <div class="modal-footer">
               <%= f.button :submit, class: "btn-secondary" %>
             <% end %>
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
     </div>
 
 <div class='container'>
-    <div class="row">
+    <div class="d-flex flex-wrap justify-content-space-evenly gap-4">
       <% @list.bookmarks.each do |bookmark| %>
-        <div class="col-md-4">
-          <div class="card mb-3 bgr" style="max-width: 540px;">
+          <div class="card mb-3 bgr">
             <div class="row">
               <div class="col-md-4">
-                <div class="movie_poster img-fluid rounded-start" style='background-image: url("<%= bookmark.movie.poster_url %>")'></div>
+                <div class="movie_poster img-fluid rounded-start" style='background-image: url("<%= bookmark.movie.poster_url %>"); background-size: cover; background-position: center; width: 100%;'></div>
               </div>
               <div class="col-md-8">
                 <div class="card-body">
                   <h5 class="card-title text-light"><%= bookmark.movie.title %> - <%= bookmark.movie.rating.round(1) %>⭐</h5>
                   <p class="card-text"><small class="text-light"><i class="fa-solid fa-angles-right"></i><%= bookmark.comment %><i class="fa-solid fa-angles-left"></i></small></p>
-                  <p class="card-text"><%= bookmark.movie.overview %></p>
+                  <p class="card-text" style="max-height: 200px; overflow: hidden; text-overflow: ellipsis;"><%= bookmark.movie.overview %></p>
                   <div><p class="card-text delete"><small class="text-body-secondary"><%= link_to 'Delete', bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'}, class: 'btn btn-secondary' %></small></p></div>
-                </div>
               </div>
             </div>
           </div>
