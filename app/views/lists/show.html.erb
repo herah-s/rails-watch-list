@@ -1,4 +1,4 @@
-<div class="list_banner shadow-sm" style='background-image: url("<%= @list.image_url %>")'>
+<div class="list_banner shadow-sm" style='background-image: url("<%= cl_image_path @list.image.key %>")'>
 <div class="d-flex flex-column justify-content-center align-items-center">
   <div><%= @list.name %></div>
   <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
