@@ -1,5 +1,6 @@
 class List < ApplicationRecord
-  has_many :bookmarks, dependent: :destroy
+  self.table_name = "watchlist_lists"
+  has_many :bookmarks, dependent: :destroy, foreign_key: "watchlist_list_id"
   has_many :movies, through: :bookmarks
   has_one_attached :image
 
