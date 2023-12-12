@@ -5,6 +5,6 @@ class Bookmark < ApplicationRecord
 
   validates :comment, length: { minimum: 6 }
 
-  # validation to ensure the user can't one movie on the same list twice. removed to not conflict with shared db
+  # validation to ensure the user can't one movie on the same list twice
   validates :watchlist_movie_id, presence: true, uniqueness: { scope: :watchlist_list_id }
 end
