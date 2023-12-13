@@ -17,7 +17,7 @@
         <%= simple_form_for [@list, @bookmark] do |f| %>
           <%= f.input :comment %>
           <%= f.association :movie %>
-          <%= f.button :submit, class: "btn-secondary" %>
+          <%= f.button :submit, class: "btn-secondary", watchlist_list_id: @list.id %>
         <% end %>
       </div>
     </div>
