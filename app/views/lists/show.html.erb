@@ -17,7 +17,6 @@
         <%= simple_form_for [@list, @bookmark] do |f| %>
           <%= f.input :comment %>
           <%= f.association :movie %>
-          <%= f.association :list, as: :hidden, input_html: {value: @list.id } %>
           <%= f.button :submit, class: "btn-secondary" %>
         <% end %>
       </div>
